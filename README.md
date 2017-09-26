@@ -76,7 +76,7 @@ if let userName = json[999999]["wrong_key"]["wrong_name"].string {
 
 ## Requirements
 
-Swift 3
+Swift 4
 
 ## Integration
 

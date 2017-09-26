@@ -62,7 +62,7 @@ class RawRepresentableTests: XCTestCase {
         var jsonTrue:JSON = JSON(rawValue: true as NSNumber)!
 
         // Blocked by https://bugs.swift.org/browse/SR-5803
-        #if !(os(Linux) && swift(>=3.2))
+        #if !os(Linux)
             XCTAssertEqual(jsonTrue.bool, true)
         #endif
 
@@ -75,7 +75,7 @@ class RawRepresentableTests: XCTestCase {
         let objectTrue = jsonTrue.rawValue
 
         // Blocked by https://bugs.swift.org/browse/SR-5803
-        #if !(os(Linux) && swift(>=3.2))
+        #if !os(Linux)
             XCTAssertEqual(objectTrue as? Bool, true)
         #endif
 

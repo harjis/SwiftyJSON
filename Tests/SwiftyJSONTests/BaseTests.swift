@@ -302,7 +302,7 @@ class BaseTests: XCTestCase {
         XCTAssertGreaterThan(NSNumber(value: 888332.1).doubleValue, NSNumber(value:888332).doubleValue)
 
         // Blocked by https://bugs.swift.org/browse/SR-5803
-        #if !(os(Linux) && swift(>=3.2))
+        #if !os(Linux)
             XCTAssertFalse(NSNumber(value: 1) == NSNumber(value:true))
             XCTAssertFalse(NSNumber(value: 0) == NSNumber(value:false))
         #endif
